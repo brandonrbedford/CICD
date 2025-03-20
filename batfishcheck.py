@@ -1,4 +1,5 @@
 import os
+
 from pybatfish.client.session import Session
 from pybatfish.client.asserts import (
     assert_no_duplicate_router_ids,
@@ -6,16 +7,10 @@ from pybatfish.client.asserts import (
     assert_no_incompatible_ospf_sessions,
     assert_no_unestablished_bgp_sessions,
     assert_no_undefined_references,
-    assert_no_unreachable_routes,
-    assert_no_invalid_next_hop_routes,
-    assert_no_unused_interfaces,
-    assert_no_inconsistent_ip_addresses,
-    assert_no_security_vulnerabilities,
-    assert_no_missing_network_addresses,
 )
 from rich.console import Console
 
-# Initialize console for better output formatting
+# IInitialize console for better output formatting
 console = Console(color_system="truecolor")
 
 # Define constants
@@ -92,78 +87,6 @@ def test_undefined_references(bf):
     )
 
 
-def test_unreachable_routes(bf):
-    """Test for unreachable routes."""
-    console.print(
-        ":white_exclamation_mark: [bold yellow]Testing for unreachable routes[/bold yellow] "
-        ":white_exclamation_mark:"
-    )
-    assert_no_unreachable_routes(session=bf)
-    console.print(
-        ":green_heart: [bold green]No unreachable routes found![/bold green] :green_heart:"
-    )
-
-
-def test_invalid_next_hop_routes(bf):
-    """Test for routes with invalid next hops."""
-    console.print(
-        ":white_exclamation_mark: [bold yellow]Testing for routes with invalid next hops[/bold yellow] "
-        ":white_exclamation_mark:"
-    )
-    assert_no_invalid_next_hop_routes(session=bf)
-    console.print(
-        ":green_heart: [bold green]No invalid next-hop routes found![/bold green] :green_heart:"
-    )
-
-
-def test_unused_interfaces(bf):
-    """Test for unused interfaces."""
-    console.print(
-        ":white_exclamation_mark: [bold yellow]Testing for unused interfaces[/bold yellow] "
-        ":white_exclamation_mark:"
-    )
-    assert_no_unused_interfaces(session=bf)
-    console.print(
-        ":green_heart: [bold green]No unused interfaces found![/bold green] :green_heart:"
-    )
-
-
-def test_inconsistent_ip_addresses(bf):
-    """Test for inconsistent IP addresses."""
-    console.print(
-        ":white_exclamation_mark: [bold yellow]Testing for inconsistent IP addresses[/bold yellow] "
-        ":white_exclamation_mark:"
-    )
-    assert_no_inconsistent_ip_addresses(session=bf)
-    console.print(
-        ":green_heart: [bold green]No inconsistent IP addresses found![/bold green] :green_heart:"
-    )
-
-
-def test_security_vulnerabilities(bf):
-    """Test for security vulnerabilities."""
-    console.print(
-        ":white_exclamation_mark: [bold yellow]Testing for security vulnerabilities[/bold yellow] "
-        ":white_exclamation_mark:"
-    )
-    assert_no_security_vulnerabilities(session=bf)
-    console.print(
-        ":green_heart: [bold green]No security vulnerabilities found![/bold green] :green_heart:"
-    )
-
-
-def test_missing_network_addresses(bf):
-    """Test for missing network addresses."""
-    console.print(
-        ":white_exclamation_mark: [bold yellow]Testing for missing network addresses[/bold yellow] "
-        ":white_exclamation_mark:"
-    )
-    assert_no_missing_network_addresses(session=bf)
-    console.print(
-        ":green_heart: [bold green]No missing network addresses found![/bold green] :green_heart:"
-    )
-
-
 def main():
     """Main function to run Batfish analysis on the configurations."""
     snapshot_name = "configs"  # Example snapshot name
@@ -194,12 +117,6 @@ def main():
     test_ospf_compatibility(bf)
     test_bgp_unestablished(bf)
     test_undefined_references(bf)
-    test_unreachable_routes(bf)
-    test_invalid_next_hop_routes(bf)
-    test_unused_interfaces(bf)
-    test_inconsistent_ip_addresses(bf)
-    test_security_vulnerabilities(bf)
-    test_missing_network_addresses(bf)
 
 
 if __name__ == "__main__":

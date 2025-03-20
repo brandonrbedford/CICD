@@ -9,7 +9,7 @@ steps:
   - black . --check
 
 - name: Batfish Prechecks
-  image: brandonrbedford/test
+  image: brandonrbedford/netauto
   commands:
     - pytest batfishcheck.py --disable-pytest-warnings -s
 

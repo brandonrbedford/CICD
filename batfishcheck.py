@@ -20,13 +20,13 @@ CONFIG_DIR = "Snapshots/configs"
 CLONE_DIR = "./cloned_configs"
 
 
-def clone_repo():
-    """Clone the GitHub repository if not already cloned."""
-    if not os.path.exists(CLONE_DIR):
-        console.print(":warning: Cloning repository from GitHub...")
-        git.Repo.clone_from(GITHUB_REPO_URL, CLONE_DIR)
-    else:
-        console.print(":green_heart: Repository already cloned.")
+# #def clone_repo():
+#     """Clone the GitHub repository if not already cloned."""
+#     if not os.path.exists(CLONE_DIR):
+#         console.print(":warning: Cloning repository from GitHub...")
+#         git.Repo.clone_from(GITHUB_REPO_URL, CLONE_DIR)
+#     else:
+#         console.print(":green_heart: Repository already cloned.")
 
 
 def ensure_snapshot_directory(snapshot_dir):
@@ -97,8 +97,8 @@ def main():
     snapshot_name = "snapshot_01"  # Example snapshot name
     snapshot_dir = os.path.join(CLONE_DIR, CONFIG_DIR)
 
-    # Clone the GitHub repo if not already cloned
-    clone_repo()
+    # # Clone the GitHub repo if not already cloned
+    # clone_repo()
 
     # Ensure the snapshot directory exists
     if not ensure_snapshot_directory(snapshot_dir):

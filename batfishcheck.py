@@ -86,8 +86,8 @@ def test_undefined_references(snap):
 def main():
     """init all the things"""
     NETWORK_NAME = "LAB_NETWORK"
-    SNAPSHOT_NAME = "snapshot00"
-    SNAPSHOT_DIR = "./snapshots"
+    SNAPSHOT_NAME = "R1"
+    SNAPSHOT_DIR = "/cisco_configs/"
     bf_session.host = "192.168.219.128"
     bf_set_network(NETWORK_NAME)
     init_snap = bf_init_snapshot(SNAPSHOT_DIR, name=SNAPSHOT_NAME, overwrite=True)

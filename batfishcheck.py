@@ -86,7 +86,7 @@ def main():
     snapshot_dir = "./Snapshots/"  # Ensure this path exists
 
     # Initialize Batfish session
-    bf = Session(host="127.0.0.1:8888")  # Ensure Batfish is running
+    bf = Session(host="localhost")  # Ensure Batfish is running
 
     # Set network and snapshot
     bf.set_network("LAB_NETWORK")

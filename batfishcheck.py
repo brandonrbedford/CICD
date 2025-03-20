@@ -8,8 +8,8 @@ from pybatfish.datamodel import *
 from pybatfish.datamodel.answer import *
 from pybatfish.datamodel.flow import *
 
-from pybatfish.client.commands import *
-from pybatfish.question import load_questions
+#from pybatfish.client.commands import *
+#from pybatfish.question import load_questions
 from pybatfish.client.asserts import (
     assert_no_duplicate_router_ids,
     assert_no_incompatible_bgp_sessions,

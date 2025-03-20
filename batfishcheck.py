@@ -30,46 +30,61 @@ def ensure_snapshot_directory(snapshot_dir):
 def test_duplicate_rtr_ids(bf):
     """Test for duplicate router IDs."""
     console.print(
-        ":white_exclamation_mark: [bold yellow]Testing for duplicate router IDs[/bold yellow] :white_exclamation_mark:"
+        ":white_exclamation_mark: [bold yellow]Testing for duplicate router IDs[/bold yellow] "
+        ":white_exclamation_mark:"
     )
     assert_no_duplicate_router_ids(session=bf, protocols=["ospf", "bgp"])
-    console.print(":green_heart: [bold green]No duplicate router IDs found![/bold green] :green_heart:")
+    console.print(
+        ":green_heart: [bold green]No duplicate router IDs found![/bold green] :green_heart:"
+    )
 
 
 def test_bgp_compatibility(bf):
     """Test for incompatible BGP sessions."""
     console.print(
-        ":white_exclamation_mark: [bold yellow]Testing for incompatible BGP sessions[/bold yellow] :white_exclamation_mark:"
+        ":white_exclamation_mark: [bold yellow]Testing for incompatible BGP sessions[/bold yellow] "
+        ":white_exclamation_mark:"
     )
     assert_no_incompatible_bgp_sessions(session=bf)
-    console.print(":green_heart: [bold green]All BGP sessions compatible![/bold green] :green_heart:")
+    console.print(
+        ":green_heart: [bold green]All BGP sessions compatible![/bold green] :green_heart:"
+    )
 
 
 def test_ospf_compatibility(bf):
     """Test for incompatible OSPF sessions."""
     console.print(
-        ":white_exclamation_mark: [bold yellow]Testing for incompatible OSPF sessions[/bold yellow] :white_exclamation_mark:"
+        ":white_exclamation_mark: [bold yellow]Testing for incompatible OSPF sessions[/bold yellow] "
+        ":white_exclamation_mark:"
     )
     assert_no_incompatible_ospf_sessions(session=bf)
-    console.print(":green_heart: [bold green]All OSPF sessions compatible![/bold green] :green_heart:")
+    console.print(
+        ":green_heart: [bold green]All OSPF sessions compatible![/bold green] :green_heart:"
+    )
 
 
 def test_bgp_unestablished(bf):
     """Test for BGP sessions that are not established."""
     console.print(
-        ":white_exclamation_mark: [bold yellow]Testing for unestablished BGP sessions[/bold yellow] :white_exclamation_mark:"
+        ":white_exclamation_mark: [bold yellow]Testing for unestablished BGP sessions[/bold yellow] "
+        ":white_exclamation_mark:"
     )
     assert_no_unestablished_bgp_sessions(session=bf)
-    console.print(":green_heart: [bold green]All BGP sessions are established![/bold green] :green_heart:")
+    console.print(
+        ":green_heart: [bold green]All BGP sessions are established![/bold green] :green_heart:"
+    )
 
 
 def test_undefined_references(bf):
     """Test for undefined references."""
     console.print(
-        ":white_exclamation_mark: [bold yellow]Testing for undefined references[/bold yellow] :white_exclamation_mark:"
+        ":white_exclamation_mark: [bold yellow]Testing for undefined references[/bold yellow] "
+        ":white_exclamation_mark:"
     )
     assert_no_undefined_references(session=bf)
-    console.print(":green_heart: [bold green]No undefined references found![/bold green] :green_heart:")
+    console.print(
+        ":green_heart: [bold green]No undefined references found![/bold green] :green_heart:"
+    )
 
 
 def main():

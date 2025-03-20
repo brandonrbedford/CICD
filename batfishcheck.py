@@ -82,7 +82,7 @@ def test_undefined_references(snap):
 
 def main():
     """Initialize the Batfish session and run network tests."""
-    snapshot_name = "R1.txt"
+    snapshot_name = "R1.cfg"
     snapshot_dir = "./Snapshots/"  # Ensure this path exists
 
     # Initialize Batfish session

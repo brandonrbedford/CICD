@@ -82,32 +82,10 @@ def test_undefined_references(snap):
         ":green_heart:"
     )
 
-
-def ensure_snapshot_directory(snapshot_dir):
-    """Ensure the snapshot directory exists, cloning if necessary."""
-    if not os.path.exists(snapshot_dir):
-        console.print(
-            ":warning: [bold red]Snapshot directory not found! "
-            "Cloning from GitHub...[/bold red] :warning:"
-        )
-        subprocess.run(
-            [
-                "git",
-                "clone",
-                "--branch",
-                "cisco_configs",
-                "https://github.com/yourusername/yourrepo.git",
-                snapshot_dir,
-            ]
-        )
-
-
 def main():
     """Initialize the Batfish session and run network tests."""
     snapshot_name = "R1"
     snapshot_dir = "./Snapshots/"  # Ensure this path exists
-
-    ensure_snapshot_directory(snapshot_dir)
 
     # Initialize Batfish session
     bf = Session(host="localhost")  # Ensure Batfish is running

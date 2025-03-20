@@ -26,8 +26,8 @@ def test_duplicate_rtr_ids(snap):
     )
     assert_no_duplicate_router_ids(snapshot=snap, protocols=["ospf", "bgp"])
     console.print(
-        ":green_heart: [bold green]No duplicate router IDs found!"
-        "[/bold green] :green_heart:"
+        ":green_heart: [bold green]No duplicate router IDs found![/bold green] "
+        ":green_heart:"
     )
 
 
@@ -39,8 +39,8 @@ def test_bgp_compatibility(snap):
     )
     assert_no_incompatible_bgp_sessions(snapshot=snap)
     console.print(
-        ":green_heart: [bold green]All BGP sessions compatible!"
-        "[/bold green] :green_heart:"
+        ":green_heart: [bold green]All BGP sessions compatible![/bold green] "
+        ":green_heart:"
     )
 
 
@@ -52,8 +52,8 @@ def test_ospf_compatibility(snap):
     )
     assert_no_incompatible_ospf_sessions(snapshot=snap)
     console.print(
-        ":green_heart: [bold green]All OSPF sessions compatible!"
-        "[/bold green] :green_heart:"
+        ":green_heart: [bold green]All OSPF sessions compatible![/bold green] "
+        ":green_heart:"
     )
 
 
@@ -65,8 +65,8 @@ def test_bgp_unestablished(snap):
     )
     assert_no_unestablished_bgp_sessions(snapshot=snap)
     console.print(
-        ":green_heart: [bold green]All BGP sessions are established!"
-        "[/bold green] :green_heart:"
+        ":green_heart: [bold green]All BGP sessions are established![/bold green] "
+        ":green_heart:"
     )
 
 
@@ -78,8 +78,8 @@ def test_undefined_references(snap):
     )
     assert_no_undefined_references(snapshot=snap)
     console.print(
-        ":green_heart: [bold green]No undefined references found!"
-        "[/bold green] :green_heart:"
+        ":green_heart: [bold green]No undefined references found![/bold green] "
+        ":green_heart:"
     )
 
 
@@ -92,8 +92,12 @@ def ensure_snapshot_directory(snapshot_dir):
         )
         subprocess.run(
             [
-                "git", "clone", "--branch", "cisco_configs",
-                "https://github.com/yourusername/yourrepo.git", snapshot_dir
+                "git",
+                "clone",
+                "--branch",
+                "cisco_configs",
+                "https://github.com/yourusername/yourrepo.git",
+                snapshot_dir,
             ]
         )
 

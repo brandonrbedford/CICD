@@ -123,7 +123,7 @@ def main():
     df = answer.frame()
     print(df)
 
-    # RRun tests with the correct snapshot name
+    # Run tests with the correct snapshot name
     test_duplicate_rtr_ids(snapshot_name)
     test_bgp_compatibility(snapshot_name)
     test_ospf_compatibility(snapshot_name)

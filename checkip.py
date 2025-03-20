@@ -11,6 +11,6 @@ R1 = {
     "password": password,
 }
 
-net_connect = ConnectHandler(**R1) xxxx
+net_connect = ConnectHandler(**R1)
 output = net_connect.send_command("show ip int brief")
 print(output)

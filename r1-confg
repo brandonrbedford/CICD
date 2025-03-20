@@ -1,6 +1,6 @@
 
 !
-! Last configuration change at 08:00:07 UTC Thu Mar 20 2025
+! Last configuration change at 08:21:40 UTC Thu Mar 20 2025
 !
 version 15.4
 service timestamps debug datetime msec
@@ -181,11 +181,13 @@ line vty 0 4
  transport input ssh
  transport output ssh
 !
-event manager applet extract-uptime-hostname
+event manager applet Backup_Config
  event syslog pattern "%SYS-5-CONFIG_I: Configured from"
- action 1.0 cli command "show version"
- action 1.1 syslog msg "Raw show version output: $_cli_result"
- action 1.2 regexp "(\S+)\s+uptime" "$_cli_result" hostname
- action 2.0 syslog msg "The hostname just before uptime is: ${hostname}"
+ action 1   info type routername
+ action 1.1 cli command "enable"
+ action 1.2 cli command "copy run tftp" pattern "Address"
+ action 1.3 cli command "192.168.219.128" pattern "filename"
+ action 1.4 cli command "$_info_routername-config_$_event_pub_sec"
+ action 2.0 syslog priority informational msg "Configuration change detected. Write to TFTP succesfully executed"
 !
 end

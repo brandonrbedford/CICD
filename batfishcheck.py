@@ -16,7 +16,7 @@ console = Console(color_system="truecolor")
 # Define constants
 GITHUB_REPO_URL = "https://github.com/brandonrbedford/cicd.git"
 REPO_NAME = "cicd"  # Replace with your actual repo name
-CONFIG_DIR = "Snapshots/configs"
+CONFIG_DIR = "./Snapshots/configs"
 CLONE_DIR = "./cloned_configs"
 
 

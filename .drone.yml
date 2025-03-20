@@ -9,7 +9,7 @@ steps:
   - black . --check
 
 - name: Batfish Prechecks
-  image: brandonrbedford/netauto
+  image: brandonrbedford/test
   commands:
     - python batfishcheck.py
 

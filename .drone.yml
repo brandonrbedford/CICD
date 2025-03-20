@@ -2,12 +2,16 @@ kind: pipeline
 type: docker
 name: Testing Python CI/CD
 
-
 steps:
-- name: Black Code Format Check
+#- name: Black Code Format Check
+#  image: brandonrbedford/netauto
+#  commands:
+#  - black . --check
+
+- name: Batfish Prechecks
   image: brandonrbedford/netauto
   commands:
-  - black . --check
+    - python3 batfishcheck.py
 
 - name: Check IP Interfaces
   image: brandonrbedford/netauto

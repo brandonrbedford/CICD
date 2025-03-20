@@ -46,3 +46,12 @@ def test_bgp_compatibility(snap):
 
 def test_ospf_compatibility(snap):
     """Test for incompatible OSPF sessions."""
+
+
+bf = Session(host="localhost")
+if bf:
+    console.print(":white_check_mark: [bold green]Session initialized successfully![/bold green]")
+else:
+    console.print(":x: [bold red]Session initialization failed![/bold red]")
+
+

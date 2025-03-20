@@ -1,13 +1,13 @@
 
 !
-! Last configuration change at 08:43:25 UTC Thu Mar 20 2025
+! Last configuration change at 22:29:11 UTC Thu Mar 20 2025
 !
 version 15.4
 service timestamps debug datetime msec
 service timestamps log datetime msec
 no service password-encryption
 !
-hostname R1
+hostname R2
 !
 boot-start-marker
 boot-end-marker
@@ -50,7 +50,6 @@ multilink bundle-name authenticated
 !
 file prompt quiet
 username cisco privilege 15 password 0 cisco
-username cisco-backup privilege 15 secret 5 $1$d3Wb$ojXWqVMxO.M9/NoyJjohq.
 !
 redundancy
 !
@@ -72,10 +71,10 @@ ip scp server enable
 !
 !
 interface Loopback0
- ip address 10.0.0.1 255.255.255.255
+ ip address 10.0.0.2 255.255.255.255
 !
 interface Ethernet0/0
- ip address 192.168.219.131 255.255.255.0
+ ip address 192.168.219.132 255.255.255.0
 !
 interface Ethernet0/1
  no ip address

@@ -105,7 +105,7 @@ def ensure_snapshot_directory(snapshot_dir):
 def main():
     """Initialize the Batfish session and run network tests."""
     snapshot_name = "R1"
-    snapshot_dir = "./cisco_configs/"  # Ensure this path exists
+    snapshot_dir = "./Snapshots/"  # Ensure this path exists
 
     ensure_snapshot_directory(snapshot_dir)
 

@@ -94,7 +94,7 @@ def test_undefined_references(snap):
 
 def main():
     """Main function to run Batfish analysis on the configurations."""
-    snapshot_name = "snapshot_01"  # Example snapshot name
+    snapshot_name = "R1.cfg"  # Example snapshot name
     snapshot_dir = os.path.join(CLONE_DIR, CONFIG_DIR)
 
     # # Clone the GitHub repo if not already cloned

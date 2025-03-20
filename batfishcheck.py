@@ -1,4 +1,5 @@
 import os
+
 from pybatfish.client.session import Session
 from pybatfish.client.asserts import (
     assert_no_duplicate_router_ids,
@@ -29,7 +30,8 @@ def ensure_snapshot_directory(snapshot_dir):
 def test_duplicate_rtr_ids(bf):
     """Test for duplicate router IDs."""
     console.print(
-        ":white_exclamation_mark: [bold yellow]Testing for duplicate router IDs[/bold yellow] :white_exclamation_mark:"
+        ":white_exclamation_mark: [bold yellow]Testing for duplicate router IDs[/bold yellow] "
+        ":white_exclamation_mark:"
     )
     assert_no_duplicate_router_ids(session=bf, protocols=["ospf", "bgp"])
     console.print(
@@ -40,7 +42,8 @@ def test_duplicate_rtr_ids(bf):
 def test_bgp_compatibility(bf):
     """Test for incompatible BGP sessions."""
     console.print(
-        ":white_exclamation_mark: [bold yellow]Testing for incompatible BGP sessions[/bold yellow] :white_exclamation_mark:"
+        ":white_exclamation_mark: [bold yellow]Testing for incompatible BGP sessions[/bold yellow] "
+        ":white_exclamation_mark:"
     )
     assert_no_incompatible_bgp_sessions(session=bf)
     console.print(
@@ -51,7 +54,8 @@ def test_bgp_compatibility(bf):
 def test_ospf_compatibility(bf):
     """Test for incompatible OSPF sessions."""
     console.print(
-        ":white_exclamation_mark: [bold yellow]Testing for incompatible OSPF sessions[/bold yellow] :white_exclamation_mark:"
+        ":white_exclamation_mark: [bold yellow]Testing for incompatible OSPF sessions[/bold yellow] "
+        ":white_exclamation_mark:"
     )
     assert_no_incompatible_ospf_sessions(session=bf)
     console.print(
@@ -62,7 +66,8 @@ def test_ospf_compatibility(bf):
 def test_bgp_unestablished(bf):
     """Test for BGP sessions that are not established."""
     console.print(
-        ":white_exclamation_mark: [bold yellow]Testing for unestablished BGP sessions[/bold yellow] :white_exclamation_mark:"
+        ":white_exclamation_mark: [bold yellow]Testing for unestablished BGP sessions[/bold yellow] "
+        ":white_exclamation_mark:"
     )
     assert_no_unestablished_bgp_sessions(session=bf)
     console.print(
@@ -73,7 +78,8 @@ def test_bgp_unestablished(bf):
 def test_undefined_references(bf):
     """Test for undefined references."""
     console.print(
-        ":white_exclamation_mark: [bold yellow]Testing for undefined references[/bold yellow] :white_exclamation_mark:"
+        ":white_exclamation_mark: [bold yellow]Testing for undefined references[/bold yellow] "
+        ":white_exclamation_mark:"
     )
     assert_no_undefined_references(session=bf)
     console.print(
@@ -85,7 +91,6 @@ def main():
     """Main function to run Batfish analysis on the configurations."""
     snapshot_name = "configs"  # Example snapshot name
     snapshot_dir = CONFIG_DIR
-
 
     # Ensure the snapshot directory exists
     if not ensure_snapshot_directory(snapshot_dir):

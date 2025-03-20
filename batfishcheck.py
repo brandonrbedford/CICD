@@ -37,12 +37,12 @@ def ensure_snapshot_directory(snapshot_dir):
     return True
 
 
-def test_duplicate_rtr_ids(snap):
+def test_duplicate_rtr_ids(bf):
     """Test for duplicate router IDs."""
     console.print(
         ":white_exclamation_mark: [bold yellow]Testing for duplicate router IDs[/bold yellow] :white_exclamation_mark:"
     )
-    assert_no_duplicate_router_ids(snapshot=snap, protocols=["ospf", "bgp"])
+    assert_no_duplicate_router_ids(session=bf, protocols=["ospf", "bgp"])
     console.print(
         ":green_heart: [bold green]No duplicate router IDs found![/bold green] :green_heart:"
     )

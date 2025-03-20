@@ -2,7 +2,7 @@ kind: pipeline
 type: docker
 name: Testing Python CI/CD
 
-#steps:
+steps:
 #- name: Black Code Format Check
 #  image: brandonrbedford/netauto
 #  commands:

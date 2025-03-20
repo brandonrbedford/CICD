@@ -7,8 +7,10 @@ steps:
 - name: Install and deploy
   image: python
   environment:
-    MY_PASS:
-      from_secret: MY_PASS
+    PASSWORD:
+      from_secret: PASSWORD
+    USER:
+      from_secret: USER
   commands:
   - pip3 install -r requirements.txt
   - python3 bat.py

@@ -1,16 +1,16 @@
 import os
 from netmiko import ConnectHandler
 
-USER = os.environ["USER"]
-PASSWORD = os.environ["PASSWORD"]
+user = os.environ["USER"]
+password = os.environ["PASSWORD"]
 
-r1 = {
+R1 = {
     "device_type": "cisco_ios",
     "ip": "192.168.219.131",
-    "username": USER,
-    "password": PASSWORD,
+    "username": user,
+    "password": password,
 }
 
-net_connect = ConnectHandler(**r1)
+net_connect = ConnectHandler(**R1)
 output = net_connect.send_command("show ip int brief")
 print(output)

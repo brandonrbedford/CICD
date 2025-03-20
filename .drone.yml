@@ -5,7 +5,7 @@ name: Testing Python CI/CD
 
 steps:
 - name: Black Code Format Check
-  image: juliopdx/netauto
+  image: jbrandonrbedford/netauto
   commands:
   - black . --check
 

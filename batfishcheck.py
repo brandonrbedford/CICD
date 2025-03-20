@@ -33,9 +33,7 @@ def test_duplicate_rtr_ids(bf):
         ":white_exclamation_mark: [bold yellow]Testing for duplicate router IDs[/bold yellow] :white_exclamation_mark:"
     )
     assert_no_duplicate_router_ids(session=bf, protocols=["ospf", "bgp"])
-    console.print(
-        ":green_heart: [bold green]No duplicate router IDs found![/bold green] :green_heart:"
-    )
+    console.print(":green_heart: [bold green]No duplicate router IDs found![/bold green] :green_heart:")
 
 
 def test_bgp_compatibility(bf):
@@ -44,9 +42,7 @@ def test_bgp_compatibility(bf):
         ":white_exclamation_mark: [bold yellow]Testing for incompatible BGP sessions[/bold yellow] :white_exclamation_mark:"
     )
     assert_no_incompatible_bgp_sessions(session=bf)
-    console.print(
-        ":green_heart: [bold green]All BGP sessions compatible![/bold green] :green_heart:"
-    )
+    console.print(":green_heart: [bold green]All BGP sessions compatible![/bold green] :green_heart:")
 
 
 def test_ospf_compatibility(bf):
@@ -55,9 +51,7 @@ def test_ospf_compatibility(bf):
         ":white_exclamation_mark: [bold yellow]Testing for incompatible OSPF sessions[/bold yellow] :white_exclamation_mark:"
     )
     assert_no_incompatible_ospf_sessions(session=bf)
-    console.print(
-        ":green_heart: [bold green]All OSPF sessions compatible![/bold green] :green_heart:"
-    )
+    console.print(":green_heart: [bold green]All OSPF sessions compatible![/bold green] :green_heart:")
 
 
 def test_bgp_unestablished(bf):
@@ -66,9 +60,7 @@ def test_bgp_unestablished(bf):
         ":white_exclamation_mark: [bold yellow]Testing for unestablished BGP sessions[/bold yellow] :white_exclamation_mark:"
     )
     assert_no_unestablished_bgp_sessions(session=bf)
-    console.print(
-        ":green_heart: [bold green]All BGP sessions are established![/bold green] :green_heart:"
-    )
+    console.print(":green_heart: [bold green]All BGP sessions are established![/bold green] :green_heart:")
 
 
 def test_undefined_references(bf):
@@ -77,16 +69,13 @@ def test_undefined_references(bf):
         ":white_exclamation_mark: [bold yellow]Testing for undefined references[/bold yellow] :white_exclamation_mark:"
     )
     assert_no_undefined_references(session=bf)
-    console.print(
-        ":green_heart: [bold green]No undefined references found![/bold green] :green_heart:"
-    )
+    console.print(":green_heart: [bold green]No undefined references found![/bold green] :green_heart:")
 
 
 def main():
     """Main function to run Batfish analysis on the configurations."""
     snapshot_name = "configs"  # Example snapshot name
     snapshot_dir = CONFIG_DIR
-
 
     # Ensure the snapshot directory exists
     if not ensure_snapshot_directory(snapshot_dir):

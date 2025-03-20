@@ -10,7 +10,7 @@ from pybatfish.client.asserts import (
 )
 from rich.console import Console
 
-# Initialize console for better output formatting
+# Imnitialize console for better output formatting
 console = Console(color_system="truecolor")
 
 # Define constants

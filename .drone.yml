@@ -5,18 +5,12 @@ name: Testing Python CI/CD
 
 steps:
 - name: Install and deploy
-  image: python
+  image: brandonrbedford/netauto
   environment:
     PASSWORD:
       from_secret: PASSWORD
     USER:
       from_secret: USER
   commands:
-  - pip3 install -r requirements.txt
-  - python3 bat.py
-
-trigger:
-  branch:
-    exclude:
-    - main
-    - master
+  #- pip3 install -r requirements.txt
+  - python3 checkip.py

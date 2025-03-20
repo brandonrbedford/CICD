@@ -4,7 +4,7 @@ name: Testing Python CI/CD
 
 
 steps:
-- name: Install and deploy
+- name: Check IP Interfaces
   image: brandonrbedford/netauto
   environment:
     PASSWORD:

@@ -2,6 +2,12 @@
 
 """Script used to test the network with batfish"""
 
+import pandas as pd
+from pybatfish.client.session import Session
+from pybatfish.datamodel import *
+from pybatfish.datamodel.answer import *
+from pybatfish.datamodel.flow import *
+
 from pybatfish.client.commands import *
 from pybatfish.question import load_questions
 from pybatfish.client.asserts import (

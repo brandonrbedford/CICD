@@ -17,7 +17,7 @@ console = Console(color_system="truecolor")
 GITHUB_REPO_URL = "https://github.com/brandonrbedford/cicd.git"
 REPO_NAME = "cicd"  # Replace with your actual repo name
 CONFIG_DIR = "./Snapshots/configs"
-CLONE_DIR = "./cloned_configs"
+#CLONE_DIR = "./cloned_configs"
 
 
 # #def clone_repo():
@@ -95,7 +95,7 @@ def test_undefined_references(snap):
 def main():
     """Main function to run Batfish analysis on the configurations."""
     snapshot_name = "R1.cfg"  # Example snapshot name
-    snapshot_dir = os.path.join(CLONE_DIR, CONFIG_DIR)
+    snapshot_dir = CONFIG_DIR
 
     # # Clone the GitHub repo if not already cloned
     # clone_repo()

@@ -2,9 +2,6 @@
 
 """Script used to test the network with Batfish."""
 
-import os
-import subprocess
-import pandas as pd
 from pybatfish.client.session import Session
 from pybatfish.client.asserts import (
     assert_no_duplicate_router_ids,
@@ -82,9 +79,10 @@ def test_undefined_references(snap):
         ":green_heart:"
     )
 
+
 def main():
     """Initialize the Batfish session and run network tests."""
-    snapshot_name = "R1"
+    snapshot_name = "R1.txt"
     snapshot_dir = "./Snapshots/"  # Ensure this path exists
 
     # Initialize Batfish session
@@ -101,7 +99,7 @@ def main():
     df = answer.frame()
     print(df)
 
-    # RRun tests with the correct snapshot name
+    # Run tests with the correct snapshot name
     test_duplicate_rtr_ids(snapshot_name)
     test_bgp_compatibility(snapshot_name)
     test_ospf_compatibility(snapshot_name)

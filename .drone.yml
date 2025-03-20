@@ -3,10 +3,10 @@ type: docker
 name: Testing Python CI/CD
 
 steps:
-#- name: Black Code Format Check
-#  image: brandonrbedford/netauto
-#  commands:
-#  - black . --check
+- name: Black Code Format Check
+  image: brandonrbedford/netauto
+  commands:
+  - black . --check
 
 - name: Batfish Prechecks
   image: brandonrbedford/netauto

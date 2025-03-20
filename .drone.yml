@@ -11,7 +11,7 @@ steps:
 - name: Batfish Prechecks
   image: brandonrbedford/test
   commands:
-    - pytest batfishcheck.py
+    - pytest batfishcheck.py --disable-pytest-warnings -s
 
 - name: Check IP Interfaces
   image: brandonrbedford/netauto

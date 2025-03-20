@@ -48,45 +48,45 @@ def test_duplicate_rtr_ids(bf):
     )
 
 
-def test_bgp_compatibility(snap):
+def test_bgp_compatibility(bf):
     """Test for incompatible BGP sessions."""
     console.print(
         ":white_exclamation_mark: [bold yellow]Testing for incompatible BGP sessions[/bold yellow] :white_exclamation_mark:"
     )
-    assert_no_incompatible_bgp_sessions(snapshot=snap)
+    assert_no_incompatible_bgp_sessions(session=bf)
     console.print(
         ":green_heart: [bold green]All BGP sessions compatible![/bold green] :green_heart:"
     )
 
 
-def test_ospf_compatibility(snap):
+def test_ospf_compatibility(bf):
     """Test for incompatible OSPF sessions."""
     console.print(
         ":white_exclamation_mark: [bold yellow]Testing for incompatible OSPF sessions[/bold yellow] :white_exclamation_mark:"
     )
-    assert_no_incompatible_ospf_sessions(snapshot=snap)
+    assert_no_incompatible_ospf_sessions(session=bf)
     console.print(
         ":green_heart: [bold green]All OSPF sessions compatible![/bold green] :green_heart:"
     )
 
 
-def test_bgp_unestablished(snap):
+def test_bgp_unestablished(bf):
     """Test for BGP sessions that are not established."""
     console.print(
         ":white_exclamation_mark: [bold yellow]Testing for unestablished BGP sessions[/bold yellow] :white_exclamation_mark:"
     )
-    assert_no_unestablished_bgp_sessions(snapshot=snap)
+    assert_no_unestablished_bgp_sessions(session=bf)
     console.print(
         ":green_heart: [bold green]All BGP sessions are established![/bold green] :green_heart:"
     )
 
 
-def test_undefined_references(snap):
+def test_undefined_references(bf):
     """Test for undefined references."""
     console.print(
         ":white_exclamation_mark: [bold yellow]Testing for undefined references[/bold yellow] :white_exclamation_mark:"
     )
-    assert_no_undefined_references(snapshot=snap)
+    assert_no_undefined_references(session=bf)
     console.print(
         ":green_heart: [bold green]No undefined references found![/bold green] :green_heart:"
     )
@@ -120,11 +120,11 @@ def main():
     print(df)
 
     # Run common tests on the configurations
-    test_duplicate_rtr_ids(snapshot_name)
-    test_bgp_compatibility(snapshot_name)
-    test_ospf_compatibility(snapshot_name)
-    test_bgp_unestablished(snapshot_name)
-    test_undefined_references(snapshot_name)
+    test_duplicate_rtr_ids(bf)
+    test_bgp_compatibility(bf)
+    test_ospf_compatibility(bf)
+    test_bgp_unestablished(bf)
+    test_undefined_references(bf)
 
 
 if __name__ == "__main__":

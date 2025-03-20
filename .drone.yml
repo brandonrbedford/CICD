@@ -11,7 +11,7 @@ steps:
 - name: Batfish Prechecks
   image: brandonrbedford/test
   commands:
-    - python batfishcheck.py
+    - pytest batfishcheck.py
 
 - name: Check IP Interfaces
   image: brandonrbedford/netauto

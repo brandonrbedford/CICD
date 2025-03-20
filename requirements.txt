@@ -1,9 +1,0 @@
-netmiko
-rich
-black
-pybatfish
-napalm
-pytest
-nornir
-nornir-utils
-nornir-napalm

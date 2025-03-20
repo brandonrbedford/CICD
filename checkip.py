@@ -1,5 +1,4 @@
 import os
-
 from netmiko import ConnectHandler
 
 user = os.environ["USER"]

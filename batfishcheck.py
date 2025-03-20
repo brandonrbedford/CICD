@@ -1,12 +1,4 @@
-#!/usr/bin/env python3
+from pybatfish.client.session import Session
 
-"""Simple Hello World script."""
-
-
-def main():
-    """Print Hello, World!."""
-    print("Hello, World!")
-
-
-if __name__ == "__main__":
-    main()
+bf = Session(host="127.0.0.1")  # Connect to the local Batfish server
+print(bf)

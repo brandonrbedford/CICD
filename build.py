@@ -25,7 +25,7 @@ def deploy_network(task):
     task1_result = task.run(
         name=f"Configuring {task.host.name}!",
         task=napalm_configure,
-        filename=f"./Snapshots/configs/{task.host.name}.txt",
+        filename=f"./Snapshots/configs/{task.host.name}.cfg",
         dry_run=args.dry,
         replace=True,
     )

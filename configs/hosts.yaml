@@ -1,6 +1,7 @@
 ---
 R1:
   hostname: 192.168.219.131
+  platform: ios
   groups:
     - ios
 

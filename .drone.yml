@@ -24,7 +24,7 @@ steps:
   - python build.py --dry_run
 
 - name: Deploy Configuration
-  image: johnbreth/netauto
+  image: brandonrbedford/netauto
   environment:
     PASSWORD:
       from_secret: PASSWORD
